@@ -1,0 +1,17 @@
+
+<div class="main">
+    <div class="container">
+        <h1> {{ uwuwufu.Name }}  </h1>
+        <h2> {{ roundTitle }} </h2>
+        <div class="uwuwufu-container">
+            <div *ngFor="let item of uwuwufu.ItemDuos[itemDuo]; let i = index" class="uwuwufu-item" @bounceInRight>
+                <app-uwuwufu-item *ngIf="!winnerItem" [uwuwufuItem]="item" [index]="i" (onChoiceSelected)="makeDecision(item)"></app-uwuwufu-item>
+            </div>
+        
+            <div *ngIf="winnerItem" class="uwuwufu-item  bounce-in">
+                <app-uwuwufu-item [uwuwufuItem]="winnerItem"></app-uwuwufu-item>
+            </div>
+        </div>
+    </div>
+    
+</div>

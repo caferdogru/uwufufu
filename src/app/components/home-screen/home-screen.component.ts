@@ -1,0 +1,68 @@
+import { Component } from '@angular/core';
+import { Uwuwufu } from 'src/app/models/uwuwufu.model';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import * as data from '../../../assets/data/data.json'; 
+
+
+@Component({
+  selector: 'app-home-screen',
+  templateUrl: './home-screen.component.html',
+  styleUrls: ['./home-screen.component.css']
+})
+export class HomeScreenComponent {
+
+
+  categories = [
+    'Sports',
+    'Film',
+    'Anime'
+  ]
+  uwuwufuList: Uwuwufu[] = [
+    {
+      Id: 1,
+      Name: 'En İyi Türk Yemeği',
+      Description: 'test açıklama',
+      ImageUrl: 'https://image.hurimg.com/i/hurriyet/75/0x0/64f88edb4e3fe105909011ee.jpg',
+      Items: [
+        { Id: 1, Title: 'Adana Kebap', ImgUrl: 'https://image.hurimg.com/i/hurriyet/75/0x0/64f88edb4e3fe105909011ee.jpg', Uwuwufu: 1 },
+        { Id: 2, Title: 'İskender', ImgUrl: 'https://d17wu0fn6x6rgz.cloudfront.net/img/w/tarif/mgt/iskender.webp', Uwuwufu: 1 },
+        { Id: 3, Title: 'Mantı', ImgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoLuXjFSsmgvVhr0R2ifqLqolUfOR65U2VfQ&s', Uwuwufu: 1 },
+        { Id: 4, Title: 'Baklava', ImgUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Baklava%281%29.png', Uwuwufu: 1 },
+        { Id: 4, Title: 'Cağ kebabı', ImgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi6o6PqhsuL-VCGSlUZDIIo5yShgeV1lHBUA&s', Uwuwufu: 1 },
+        { Id: 4, Title: 'Sütlaç', ImgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVG-JLtSNc5CHWZYEUS538PP5PAvJMGJcRrw&s', Uwuwufu: 1 },
+        { Id: 4, Title: 'Kilis Tava', ImgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFz-0at3ewpUJy8E8diyZv5_qXLK-txGWAWQ&s', Uwuwufu: 1 },
+        { Id: 4, Title: 'İnegöl Köfte', ImgUrl: 'https://image.hurimg.com/i/hurriyet/75/750x422/5f11adbe67b0a806305b0773.jpg', Uwuwufu: 1 },
+      ]
+  
+    },
+    {
+      Id: 2,
+      Name: 'Test2',
+      Description: 'test açıklama2',
+      ImageUrl: 'https://image.hurimg.com/i/hurriyet/75/0x0/64f88edb4e3fe105909011ee.jpg',
+      Items: [
+        { Id: 1, Title: 'Item1', ImgUrl: '', Uwuwufu: 2 },
+        { Id: 2, Title: 'Item2', ImgUrl: '', Uwuwufu: 2 },
+        { Id: 3, Title: 'Item3', ImgUrl: '', Uwuwufu: 2 },
+        { Id: 4, Title: 'Item4', ImgUrl: '', Uwuwufu: 2 },
+      ]
+
+    }
+  ]
+  // uwuwufuList: Uwuwufu[]
+  // ngOnInit() {
+  //   this.uwuwufuList = data as Uwuwufu[];
+  // }
+
+  isMobileMenuOpen = false;
+  isSidebarOpen = false;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+}

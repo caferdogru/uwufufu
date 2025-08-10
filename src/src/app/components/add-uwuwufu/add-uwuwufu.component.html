@@ -1,0 +1,66 @@
+<div class="add-uwuwufu-container">
+  <h2>Create New Uwuwufu</h2>
+
+  <form [formGroup]="uwuwufuForm" (ngSubmit)="onSubmit()" class="uwuwufu-form">
+    <div class="main-info">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" type="text" formControlName="name" placeholder="Enter name">
+        <div class="error" *ngIf="uwuwufuForm.get('name')?.invalid && uwuwufuForm.get('name')?.touched">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description" placeholder="Enter description"></textarea>
+        <div class="error" *ngIf="uwuwufuForm.get('description')?.invalid && uwuwufuForm.get('description')?.touched">
+          Description is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mainImage">Main Image:</label>
+        <input 
+          type="file" 
+          id="mainImage" 
+          accept="image/*" 
+          (change)="onMainImageSelected($event)"
+          class="file-input">
+        <div class="image-preview" *ngIf="imagePreview">
+          <img [src]="imagePreview" alt="Preview">
+        </div>
+      </div>
+    </div>
+
+    <div class="items-section">
+      <h3>Items</h3>
+      <button type="button" (click)="addItem()" class="add-item-btn">Add Item</button>
+
+      <div formArrayName="items" class="items-list">
+        <div *ngFor="let item of items.controls; let i=index" [formGroupName]="i" class="item-form">
+          <div class="form-group">
+            <label>Title:</label>
+            <input type="text" formControlName="title" placeholder="Enter item title">
+          </div>
+
+          <div class="form-group">
+            <label>Image:</label>
+            <input 
+              type="file" 
+              accept="image/*" 
+              (change)="onItemImageSelected($event, i)"
+              class="file-input">
+            <div class="image-preview" *ngIf="itemImagePreviews[i]">
+              <img [src]="itemImagePreviews[i]" alt="Item Preview">
+            </div>
+          </div>
+
+          <button type="button" (click)="removeItem(i)" class="remove-item-btn">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!uwuwufuForm.valid" class="submit-btn">Create Uwuwufu</button>
+  </form>
+</div> 

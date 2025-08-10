@@ -1,0 +1,139 @@
+/* .container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  margin: 30px;
+  background-color: red;
+  width: 700px;
+  height: 550px;
+}
+
+.first-item > img {
+  object-fit: contain;
+  cursor: pointer;
+  border: 8px solid #0569ec;
+  border-radius: 15px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.first-item > p {
+  font-size: 25px;
+  color: #fff;
+  margin-top: 15px;
+  background-color: #0569ec;
+  padding: 25px;
+  transform: skewX(-15deg);
+}
+
+.second-item > img {
+  object-fit: contain;
+  cursor: pointer;
+  border: 8px solid rgb(169, 0, 0);
+  border-radius: 15px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.second-item > p {
+  font-size: 25px;
+  color: #fff;
+  margin-top: 15px;
+  background-color: rgb(169, 0, 0);
+  padding: 25px;
+  transform: skewX(-15deg);
+}
+
+.container > img:hover {
+  border: 8px solid #fff;
+} */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    /* background-color: red; */
+    width: 90%; /* Make the width dynamic */
+    max-width: 700px; /* Limit the maximum width */
+    height: auto; /* Adjust height automatically */
+    box-sizing: border-box;
+  }
+  
+  .first-item > img {
+    object-fit: contain;
+    cursor: pointer;
+    border: 8px solid rgb(230, 11, 11); /* This will be updated in hover for each */
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  .second-item > img {
+    object-fit: contain;
+    cursor: pointer;
+    border: 8px solid #0569ec; /* This will be updated in hover for each */
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .first-item > span, .second-item > span {
+    font-size: 20px; /* Reduced default size */
+    color: #fff;
+    margin-top: 15px;
+    padding: 15px;
+    transform: skewX(-15deg);
+    white-space: pre-wrap;
+    word-wrap: normal;
+  }
+  
+  .first-item > span {
+    background-color: #0569ec;
+  }
+  
+  .second-item > span {
+    background-color: rgb(169, 0, 0);
+  }
+  
+  .container > img:hover {
+    border: 8px solid #fff;
+  }
+  
+  /* Responsive styles for smaller screens */
+  /* @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      margin: 15px;
+      flex-direction: column;
+
+    }
+  
+    .first-item > p, .second-item > p {
+      font-size: 18px;
+      padding: 10px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .container {
+      flex-direction: column;
+      width: 100%;
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .first-item > p, .second-item > p {
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+   */

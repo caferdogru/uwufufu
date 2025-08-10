@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="navbar">
+    <h1 class="logo">UwUWUFU</h1>
+    <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+      <span class="menu-icon"></span>
+    </button>
+    <ul class="navbar-list" [class.active]="isMobileMenuOpen">
+      <li class="navbar-item">
+        <a href="#">Login</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#">Register</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="uwuwufu-section">
+    <div class="sidebar" [class.active]="isSidebarOpen">
+      <button class="sidebar-toggle" (click)="toggleSidebar()">
+        <span class="toggle-icon"></span>
+      </button>
+      <div class="section">Videolar</div>
+      <div class="section">Filters</div>
+      <div class="section">Kategori</div>
+      <ul class="sidebar-list">
+        <li class="sidebar-item" *ngFor="let cat of categories">
+          <a> {{ cat}} </a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="uwuwufu-list">
+      <div *ngFor="let item of uwuwufuList" class="card" [routerLink]="['/uwuwufu', item.Id]">
+        <h2>{{ item.Name}} </h2>
+        <img class="uwuwufu-image" [src]="item.ImageUrl" alt="{{ item.Name }}">
+      </div>
+    </div>
+  </div>
+</div>

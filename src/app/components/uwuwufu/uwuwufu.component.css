@@ -1,0 +1,176 @@
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #212121;
+  height: 100vh;
+}
+
+.uwuwufu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  height: 750px;
+  width: auto;
+
+}
+
+
+
+h1 {
+  color: #fff;
+  font-size: 35px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bounce-in {
+  animation: bounce-in 2s ease;
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #212121;
+  height: 100vh;
+  padding: 20px; /* Add padding for smaller screens */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.uwuwufu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  height: 750px;
+  width: 100%; /* Make the width dynamic */
+  max-width: 1200px; /* Set a maximum width */}
+
+h1 {
+  color: #fff;
+  font-size: 35px;
+  text-align: center; /* Center-align text for better readability */
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  text-align: center; /* Center-align text for better readability */
+}
+
+/* Bounce-in-right animation */
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bounce-in {
+  animation: bounce-in 2s ease;
+}
+
+/* Bounce-in animation */
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .uwuwufu-container {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; /* Allow the height to adjust */
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px; /* Reduce font size */
+  }
+
+  h2 {
+    font-size: 20px; /* Reduce font size */
+  }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+  .uwuwufu-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  h2 {
+    font-size: 18px; /* Further reduce font size */
+  }
+}
