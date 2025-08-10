@@ -1,27 +1,81 @@
-# UwufufuClone
+# Uwufufu Clone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Uwufufu Clone is an Angular web application inspired by the Uwufufu project. It features a playful UI and allows users to interact with Uwuwufu items, add new ones, and view them in a list. The project demonstrates component-based architecture, service usage, and data management in Angular.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Home screen with navigation
+- List and detail views for Uwuwufu items
+- Add new Uwuwufu items
+- Data persistence using local JSON (assets/data/data.json)
+- Modular Angular structure with reusable components
 
-## Code scaffolding
+## Project Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+uwufufu-clone/
+├── angular.json
+├── package.json
+├── README.md
+├── tsconfig*.json
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   ├── assets/
+│   │   └── data/data.json
+│   └── app/
+│       ├── app.module.ts
+│       ├── app-routing.module.ts
+│       ├── app.component.*
+│       ├── components/
+│       │   ├── home-screen/
+│       │   ├── uwuwufu/
+│       │   ├── uwuwufu-item/
+│       │   └── add-uwuwufu/
+│       └── models/
+│           ├── uwuwufu.model.ts
+│           └── uwuwufu-item.model.ts
+```
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
+- Node.js (v14 or higher recommended)
+- npm (v6 or higher)
+- Angular CLI (optional, for development)
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+	```sh
+	git clone https://github.com/your-username/uwufufu-clone.git
+	cd uwufufu-clone
+	```
+2. Install dependencies:
+	```sh
+	npm install
+	```
 
-## Running end-to-end tests
+### Running the App
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Start the development server:
+```sh
+npm start
+```
+The app will be available at `http://localhost:4200/`.
 
-## Further help
+### Running Tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To execute unit tests:
+```sh
+npm test
+```
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
